@@ -1,0 +1,44 @@
+<header class="h-100">
+    <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" [containerInside]="false"
+    [class.navbar-transparent]="state==='home'">
+      <mdb-navbar-brand>
+        <a class="logo navbar-brand" href="#">
+          <strong>Kate Ruban</strong>
+        </a>
+      </mdb-navbar-brand>
+      <links>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollTo('home')" [class.active]="state==='home'">
+            <a class="nav-link">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollTo('cv')" [class.active]="state==='cv'">
+            <a class="nav-link">CV</a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollTo('portfolio')" [class.active]="state==='portfolio'">
+            <a class="nav-link">Portfolio</a>
+          </li>
+          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollTo('contacts')" [class.active]="state==='contacts'">
+            <a class="nav-link">Contacts</a>
+          </li>
+        </ul>
+      </links>
+    </mdb-navbar>
+    <!-- Main -->
+    <!-- <div class="view intro-2">
+      <div class="full-bg-img">
+        <div class="mask rgba-purple-light flex-center">
+          <div class="container text-center white-text wow fadeInUp">
+            <h2>This Navbar is fixed and transparent</h2>
+            <br>
+            <h5>It will always stay visible on the top, even when you scroll down</h5>
+            <p>Navbar's background will switch from transparent to solid color while scrolling down</p>
+            <br>
+            <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- /.Main -->
+</header>
