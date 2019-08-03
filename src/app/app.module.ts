@@ -17,6 +17,7 @@ import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { ScrollspyDirective } from './scrollspy.directive';
+import { NavbarNavManipulatorDirective } from './navbar/navbar-nav-manipulator.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ScrollspyDirective } from './scrollspy.directive';
     PortfolioComponent,
     ContactsComponent,
     PageNotFoundComponent,
-    ScrollspyDirective
+    ScrollspyDirective,
+    NavbarNavManipulatorDirective
   ],
   imports: [
     BrowserModule,

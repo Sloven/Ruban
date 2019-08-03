@@ -1,32 +1,33 @@
-<header class="h-100">
-    <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" [containerInside]="false"
+<header>
+    <mdb-navbar #navbarRoot appNavbarNavManipulator
+    SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" [containerInside]="false"
     [class.navbar-transparent]="state==='home'">
       <mdb-navbar-brand>
-        <a class="logo navbar-brand" href="#">
+        <a class="logo navbar-brand" href="">
           <strong>Kate Ruban</strong>
         </a>
       </mdb-navbar-brand>
       <links>
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollTo('home')" [class.active]="state==='home'">
+          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollToClick('home')" [class.active]="state==='home'">
             <a class="nav-link">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollTo('cv')" [class.active]="state==='cv'">
+          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollToClick('cv')" [class.active]="state==='cv'">
             <a class="nav-link">CV</a>
           </li>
-          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollTo('portfolio')" [class.active]="state==='portfolio'">
+          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollToClick('portfolio')" [class.active]="state==='portfolio'">
             <a class="nav-link">Portfolio</a>
           </li>
-          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollTo('contacts')" [class.active]="state==='contacts'">
+          <li class="nav-item waves-light" mdbWavesEffect (click)="scrollToClick('contacts')" [class.active]="state==='contacts'">
             <a class="nav-link">Contacts</a>
           </li>
         </ul>
       </links>
     </mdb-navbar>
     <!-- Main -->
-    <!-- <div class="view intro-2">
+    <!-- <div class="home-component intro-2">
       <div class="full-bg-img">
         <div class="mask rgba-purple-light flex-center">
           <div class="container text-center white-text wow fadeInUp">
