@@ -14,7 +14,7 @@ export class ScrollspyDirective {
     onScroll(event: any) {
         let currentSection: string;
         const children = this.element.nativeElement.children;
-        const scrollTop = event.target.scrollTop;
+        const scrollTop = event.target.scrollTop + 1; // +1 because of rounding mistake
         const parentOffset = event.target.offsetTop;
         // tslint:disable-next-line:prefer-for-of
         for (let i = 0; i < children.length; i++) {

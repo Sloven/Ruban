@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, VirtualTimeScheduler } from 'rxjs';
+import { BehaviorSubject, VirtualTimeScheduler, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,5 +11,9 @@ export class NavbarService {
   }
   set CurrentState(state: string) {
     this.currentState.next(state);
+  }
+
+  get currentState$(): Observable<string> {
+    return this.currentState.asObservable();
   }
 }
