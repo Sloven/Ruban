@@ -18,9 +18,9 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      this.navElement = this.navbarRef.nativeElement.querySelector('nav');
-    }, 10000);
+    // setTimeout(() => {
+    //   this.navElement = this.navbarRef.nativeElement.querySelector('nav');
+    // }, 10000);
   }
 
   ngOnInit() {

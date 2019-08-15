@@ -18,7 +18,11 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { ScrollspyDirective } from './scrollspy.directive';
 import { NavbarNavManipulatorDirective } from './navbar/navbar-nav-manipulator.directive';
-
+import { PhotoSwipeComponent } from './photoswipe/photoswipe.component';
+import { ImageItemComponent } from './portfolio/items/image-item/image-item.component';
+import { FirstImageComponent } from './portfolio/items/first-image/first-image.component';
+import { SecondImageComponent } from './portfolio/items/second-image/second-image.component';
+import { VeryinterestingVideoComponent } from './portfolio/items/veryinteresting-video/veryinteresting-video.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,14 +34,19 @@ import { NavbarNavManipulatorDirective } from './navbar/navbar-nav-manipulator.d
     ContactsComponent,
     PageNotFoundComponent,
     ScrollspyDirective,
-    NavbarNavManipulatorDirective
+    NavbarNavManipulatorDirective,
+    PhotoSwipeComponent,
+    ImageItemComponent,
+    FirstImageComponent,
+    SecondImageComponent,
+    VeryinterestingVideoComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]

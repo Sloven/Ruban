@@ -1,12 +1,29 @@
     <!-- Start your project here-->
-    <div style="height: 100vh">
+    <div>
+      <!--Mask with wave-->
+<!-- <div class="view overlay">
+  <img src="assets/one.jpg" class="img-fluid" alt="Sample image with waves effect.">
+  <a>
+    <div class="mask waves-effect waves-light rgba-white-slight" mdbWavesEffect></div>
+  </a>
+</div> -->
+
         <div class="flex-center flex-column">
           <h1 class="animated fadeIn mb-4">PORTFOLIO Page</h1>
       
           <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
           <h6 class="animated fadeIn mb-3">Start browsing <a href="https://mdbootstrap.com/angular">documentation</a>.</h6>
       
-          <p class="animated fadeIn text-muted">MDB Team</p>
+          <app-first-image class="mb-3" (click)="openSlideshow()"></app-first-image>
+          <app-second-image class="mb-3" (click)="openSlideshow()"></app-second-image>
+          <app-image-item class="mb-3" (click)="openSlideshow()"></app-image-item>
+          <app-veryinteresting-video (click)="openSlideshow()"></app-veryinteresting-video>
         </div>
+
+
+      <div class="center">
+          <button class="btn btn-lg blue center" (click)="openSlideshow()">Open Slideshow</button>
+      </div>
+      <app-photoswipe #photoSwipe></app-photoswipe>
       </div>
       <!-- /Start your project here-->
