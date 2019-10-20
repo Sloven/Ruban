@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { PhotoSwipeComponent } from '../photoswipe/photoswipe.component';
 import { IImage } from '../interfaces/iimage';
+import { PhotoSwipeService } from '../photoswipe/photoswipe.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,11 +12,12 @@ export class PortfolioComponent implements OnInit {
 
   @ViewChild('photoSwipe', {static: false}) photoSwipe: PhotoSwipeComponent;
 
-  constructor() {
+  constructor(private psService: PhotoSwipeService) {
   }
 
   ngOnInit() {
   }
+
   // ========================================================================
   openSlideshow() {
         const images: IImage[] = [
@@ -54,7 +56,12 @@ export class PortfolioComponent implements OnInit {
               w: 960,
               h: 640,
               // tslint:disable-next-line:max-line-length
-              html: '<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube-nocookie.com/embed/iP2JGliTdvw?rel=0" frameborder="0" allowfullscreen></iframe></div></div>'
+              html: `
+                <div class="flex-center flex-column">
+                    <div class="col-md-5 embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item youtube-frame" src="https://www.youtube-nocookie.com/embed/iP2JGliTdvw?rel=0&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen ></iframe>
+                    </div>
+                </div>`
             }
         ];
 
@@ -65,3 +72,5 @@ export class PortfolioComponent implements OnInit {
 // html: `<div class="embed-responsive embed-responsive-4by3">
 // <iframe width="420" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/FaRJcWMDCjs" frameborder="0" allowfullscreen></iframe>
 // </div>`
+
+// html: '<div class="wrapper"><div class="video-wrapper embed-responsive-item embed-responsive-4by3"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube-nocookie.com/embed/iP2JGliTdvw?rel=0" frameborder="0" allowfullscreen></iframe></div></div>'
